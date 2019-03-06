@@ -24,7 +24,7 @@ class QueryTest
         {
             \INocturneSwoole\Connection\MySQLPool::init([
                 'test' => [
-                    'serverInfo'    => ['host' => '120.79.187.246', 'user' => 'heping', 'password' => 'Pwd123@jayjay.cn', 'database' => 'wewechat_dev', 'charset' => 'utf8'],
+                    'serverInfo'    => ['host' => '', 'user' => '', 'password' => '', 'database' => '', 'charset' => ''],
                     'maxSpareConns' => 5,
                     'maxConns'      => 10
                 ],
