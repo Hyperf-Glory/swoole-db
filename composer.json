@@ -1,0 +1,30 @@
+{
+  "name": "i-nocturne/swoole-db",
+  "description": "swoole-orm",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "He Peter",
+      "email": "847050412@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "INocturneSwoole\\Db\\": "src",
+      "INocturneSwoole\\Db\\Tests\\": "tests/"
+    }
+  },
+  "keywords": [
+    "Swoole",
+    "Mysql",
+    "orm"
+  ],
+  "require": {
+    "ext-swoole": "^4.2.9",
+    "php": ">=7.2",
+    "phpunit/phpunit": "7.5.1",
+    "i-nocturne/swoole-connection": "1.2",
+    "eaglewu/swoole-ide-helper": "dev-master"
+  }
+}
