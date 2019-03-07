@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f6645a226f8ca096f141f3f9a1354b0",
+    "content-hash": "0586f722a7c216babddbd2a369bc423a",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -66,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wudi/swoole-ide-helper.git",
-                "reference": "fae3d09e7494245a5bab0adcd09a1612fc4112b5"
+                "reference": "12c0a6b16c611ed14a5cff8970d7d80bfc5923ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wudi/swoole-ide-helper/zipball/fae3d09e7494245a5bab0adcd09a1612fc4112b5",
-                "reference": "fae3d09e7494245a5bab0adcd09a1612fc4112b5",
+                "url": "https://api.github.com/repos/wudi/swoole-ide-helper/zipball/12c0a6b16c611ed14a5cff8970d7d80bfc5923ad",
+                "reference": "12c0a6b16c611ed14a5cff8970d7d80bfc5923ad",
                 "shasum": ""
             },
             "type": "library",
@@ -98,24 +98,23 @@
                 "sublime",
                 "swoole"
             ],
-            "time": "2019-02-12T03:03:41+00:00"
+            "time": "2019-03-05T07:33:29+00:00"
         },
         {
             "name": "i-nocturne/swoole-connection",
-            "version": "1.2",
+            "version": "0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/i-nocturne/swoole-connection.git",
-                "reference": "0a540a6ad3177926d7e8972188390c4d697249b0"
+                "reference": "c875784bcddf5f1e44fa6b7e72c6e5d427d18f5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/i-nocturne/swoole-connection/zipball/0a540a6ad3177926d7e8972188390c4d697249b0",
-                "reference": "0a540a6ad3177926d7e8972188390c4d697249b0",
+                "url": "https://api.github.com/repos/i-nocturne/swoole-connection/zipball/c875784bcddf5f1e44fa6b7e72c6e5d427d18f5d",
+                "reference": "c875784bcddf5f1e44fa6b7e72c6e5d427d18f5d",
                 "shasum": ""
             },
             "require": {
-                "eaglewu/swoole-ide-helper": "dev-master",
                 "ext-swoole": "^4.2.9",
                 "php": ">=7.2",
                 "phpunit/phpunit": "7.5.1"
@@ -142,7 +141,7 @@
                 "mysql",
                 "swoole"
             ],
-            "time": "2019-03-05T06:30:54+00:00"
+            "time": "2019-03-07T11:56:56+00:00"
         },
         {
             "name": "myclabs/deep-copy",
