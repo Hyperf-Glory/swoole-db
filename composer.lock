@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0586f722a7c216babddbd2a369bc423a",
+    "content-hash": "4f565c7b25fb750f59c6e754df3ba49d",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -61,48 +61,8 @@
             "time": "2017-07-22T11:58:36+00:00"
         },
         {
-            "name": "eaglewu/swoole-ide-helper",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wudi/swoole-ide-helper.git",
-                "reference": "12c0a6b16c611ed14a5cff8970d7d80bfc5923ad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wudi/swoole-ide-helper/zipball/12c0a6b16c611ed14a5cff8970d7d80bfc5923ad",
-                "reference": "12c0a6b16c611ed14a5cff8970d7d80bfc5923ad",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "eagle",
-                    "email": "eaglewudi@gmail.com",
-                    "role": "lead"
-                }
-            ],
-            "description": "Swoole IDE Helper, to improve auto-completion",
-            "keywords": [
-                "autocomplete",
-                "codeintel",
-                "helper",
-                "ide",
-                "netbeans",
-                "phpdoc",
-                "phpstorm",
-                "sublime",
-                "swoole"
-            ],
-            "time": "2019-03-05T07:33:29+00:00"
-        },
-        {
             "name": "i-nocturne/swoole-connection",
-            "version": "0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/i-nocturne/swoole-connection.git",
@@ -1564,7 +1524,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "eaglewu/swoole-ide-helper": 20
+        "i-nocturne/swoole-connection": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

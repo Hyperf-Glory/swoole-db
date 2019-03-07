@@ -24,7 +24,6 @@
     "ext-swoole": "^4.2.9",
     "php": ">=7.2",
     "phpunit/phpunit": "7.5.1",
-    "i-nocturne/swoole-connection": "dev-master",
-    "eaglewu/swoole-ide-helper": "dev-master"
+    "i-nocturne/swoole-connection": "dev-master"
   }
 }
