@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: HePing
- * Date: 2019-03-03
- * Time: 14:55
- */
 namespace INocturneSwoole\Db;
 
 class Builder

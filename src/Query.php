@@ -41,14 +41,10 @@ class Query implements \IteratorAggregate
     private $params = [];
     /**
      * @var MySQL
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-05
-     * Time: 10:16
      */
     private $db;
 
-    public function __construct(?MySQL $db)
+    public function __construct(MySQL $db)
     {
         $this->db = $db;
     }
@@ -56,10 +52,6 @@ class Query implements \IteratorAggregate
     /**
      * @return QueryResult|\Traversable
      * @throws \Exception
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-05
-     * Time: 14:43
      */
     public function getIterator()
     {
@@ -85,10 +77,6 @@ class Query implements \IteratorAggregate
     /**
      * @return bool|mixed
      * @throws \Exception
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-05
-     * Time: 10:42
      */
     public function fetch()
     {
@@ -110,10 +98,6 @@ class Query implements \IteratorAggregate
     /**
      * @return bool|mixed
      * @throws \Exception
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-05
-     * Time: 10:52
      */
     public function fetchOrFail()
     {
@@ -129,10 +113,6 @@ class Query implements \IteratorAggregate
      * @param string|null $alias
      *
      * @return Query
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-02
-     * Time: 22:33
      */
     public function from(string $table, ?string $alias = null) : self
     {
@@ -148,10 +128,6 @@ class Query implements \IteratorAggregate
      * @param string ...$fields
      *
      * @return Query
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-02
-     * Time: 22:35
      */
     public function select(string ...$fields) : self
     {
@@ -164,10 +140,6 @@ class Query implements \IteratorAggregate
      * @param array|null $attributes
      *
      * @return Query
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-02
-     * Time: 22:35
      */
     public function insert(string $table, ?array $attributes = null) : self
     {
@@ -182,10 +154,6 @@ class Query implements \IteratorAggregate
      * @param array $attributes
      *
      * @return Query
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-02
-     * Time: 22:39
      */
     public function value(array $attributes) : self
     {
@@ -224,10 +192,6 @@ class Query implements \IteratorAggregate
      * @param string ...$conditions
      *
      * @return Query
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-02
-     * Time: 22:38
      */
     public function where(string ...$conditions) : self
     {
@@ -241,10 +205,6 @@ class Query implements \IteratorAggregate
      * @param string $type
      *
      * @return Query
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-03
-     * Time: 14:28
      */
     public function join(string $table, string $condition, string $type = 'left') : self
     {
@@ -288,10 +248,6 @@ class Query implements \IteratorAggregate
 
     /**
      * @return string
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-03
-     * Time: 14:31
      */
     public function __toString()
     {
@@ -361,10 +317,6 @@ class Query implements \IteratorAggregate
     /**
      * @return int|null
      * @throws \Exception
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-06
-     * Time: 10:19
      */
     public function count() : ?int
     {
@@ -393,10 +345,6 @@ class Query implements \IteratorAggregate
     /**
      * @return array|bool|\Swoole\Coroutine\Mysql\Statement
      * @throws \Exception
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-05
-     * Time: 10:22
      */
     public function execute()
     {
@@ -415,10 +363,6 @@ class Query implements \IteratorAggregate
      * @param                         $sql
      *
      * @return \Swoole\Coroutine\Mysql\Statement
-     * Author: HePing
-     * Email:  847050412@qq.com
-     * Date:  2019-03-05
-     * Time: 10:14
      */
     protected function _getStatement(MySQL $connection, $sql)
     {

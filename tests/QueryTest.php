@@ -24,7 +24,13 @@ class QueryTest
         {
             \INocturneSwoole\Connection\MySQLPool::init([
                 'test' => [
-                    'serverInfo'    => ['host' => '', 'user' => '', 'password' => '', 'database' => '', 'charset' => ''],
+                    'serverInfo'    => [
+                        'host'     => '',
+                        'user'     => '',
+                        'password' => '',
+                        'database' => '',
+                        'charset'  => ''
+                    ],
                     'maxSpareConns' => 5,
                     'maxConns'      => 10
                 ],
@@ -34,11 +40,15 @@ class QueryTest
                 'aaaaaaa',
                 'aaaa'
             ];
+            //开启事务
+                        $swoole_mysql->begin();
             //            insert
-            //            $query = (new Query($swoole_mysql))->insert('user', [
-            //                'name',
-            //                'password'
-            //            ])->params($data)->execute();
+            $query = (new Query($swoole_mysql))->insert('user', [
+                'name',
+                'password'
+            ])->params($data)->execute();
+                        $swoole_mysql->commit();
+            var_dump($query);
             //            $query = (new Query($swoole_mysql))->from('user')->select('id')->fetchAll();
             //            var_dump($query);
             //            update
@@ -56,10 +66,9 @@ class QueryTest
             //join
             //            $query = (new Query($swoole_mysql))->from('user','u')->select('info.info')->join('user_info as info','u.id = info.uid','inner')->execute();
             //limit
-//            $query = (new Query($swoole_mysql))->from('user')->where('id<4')->limit(2)->execute();
-//            var_dump($query);
+            //            $query = (new Query($swoole_mysql))->from('user')->where('id<4')->limit(2)->execute();
+            //            var_dump($query);
             //$ret          = $swoole_mysql->query('select * from `user`');
-            \INocturneSwoole\Connection\MySQLPool::recycle($swoole_mysql);
             $response->end('Test End');
         });
         $server->start();
