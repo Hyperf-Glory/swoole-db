@@ -66,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/i-nocturne/swoole-connection.git",
-                "reference": "c875784bcddf5f1e44fa6b7e72c6e5d427d18f5d"
+                "reference": "3041fee75ac010c59f490f2c16b3e2d03f2f99a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/i-nocturne/swoole-connection/zipball/c875784bcddf5f1e44fa6b7e72c6e5d427d18f5d",
-                "reference": "c875784bcddf5f1e44fa6b7e72c6e5d427d18f5d",
+                "url": "https://api.github.com/repos/i-nocturne/swoole-connection/zipball/3041fee75ac010c59f490f2c16b3e2d03f2f99a6",
+                "reference": "3041fee75ac010c59f490f2c16b3e2d03f2f99a6",
                 "shasum": ""
             },
             "require": {
@@ -101,7 +101,7 @@
                 "mysql",
                 "swoole"
             ],
-            "time": "2019-03-07T11:56:56+00:00"
+            "time": "2019-03-12T14:19:41+00:00"
         },
         {
             "name": "myclabs/deep-copy",
