@@ -7,6 +7,7 @@
  */
 namespace INocturneSwoole\Db;
 
+use INocturneSwoole\Connection\MySQLPool;
 use Swoole\Coroutine\MySQL;
 use Swoole\Coroutine\Mysql\Statement;
 
@@ -39,14 +40,17 @@ class Query implements \IteratorAggregate
     private $limit;
 
     private $params = [];
+
+    private $conName;
     /**
      * @var MySQL
      */
     private $db;
 
-    public function __construct(MySQL $db)
+    public function __construct(MySQL $db, $conName = null)
     {
-        $this->db = $db;
+        $this->db      = $db;
+        $this->conName = $conName;
     }
 
     /**
@@ -359,10 +363,10 @@ class Query implements \IteratorAggregate
     }
 
     /**
-     * @param \Swoole\Coroutine\MySQL $connection
-     * @param                         $sql
+     * @param MySQL $connection
+     * @param       $sql
      *
-     * @return \Swoole\Coroutine\Mysql\Statement
+     * @return mixed
      */
     protected function _getStatement(MySQL $connection, $sql)
     {
@@ -370,6 +374,12 @@ class Query implements \IteratorAggregate
 
         if ($statement == false) {
             //断线重连
+            $connection = MySQLPool::reconnect($connection, $this->conName);
+            $statement  = $connection->prepare($sql);
+            defer(function () use ($connection)
+            {
+                MySQLPool::recycle($connection);
+            });
         }
         return $statement;
     }
